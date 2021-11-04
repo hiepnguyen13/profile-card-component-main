@@ -1,0 +1,115 @@
+:root {
+  --clr-primary: hsl(185, 75%, 39%);
+  --clr-grey: hsl(0, 0%, 59%);
+  --clr-text-dark: hsl(229, 23%, 23%);
+  --clr-text-light: hsl(227, 10%, 46%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container-fluid {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2em 1em;
+
+  background: url('../images/bg-pattern-top.svg') right 40vw top -600px no-repeat,
+    #19a2ae url('../images/bg-pattern-bottom.svg') left 40vw bottom -600px no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 400px;
+  border-radius: 0.8em;
+  overflow: hidden;
+
+  margin-bottom: 1em;
+  box-shadow: 0 0.7px 1.6px -1px rgba(0, 0, 0, 0.028), 0 1.7px 3.8px -1px rgba(0, 0, 0, 0.04),
+    0 3.1px 7.1px -1px rgba(0, 0, 0, 0.05), 0 5.6px 12.7px -1px rgba(0, 0, 0, 0.06),
+    0 10.4px 23.8px -1px rgba(0, 0, 0, 0.072), 0 25px 57px -1px rgba(0, 0, 0, 0.1);
+}
+
+.img-box {
+  position: relative;
+
+  img + img {
+    display: block;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    position: absolute;
+    bottom: -3em;
+    left: calc(50% - 3em);
+  }
+}
+
+.text-box {
+  text-align: center;
+  padding-top: 4em;
+  background: #fff;
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--clr-text-dark);
+
+    span {
+      color: var(--clr-text-light);
+      font-weight: 400;
+    }
+  }
+
+  p {
+    color: var(--clr-text-light);
+    font-size: 1rem;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0 0 1px 0 var(--clr-grey);
+    margin-top: 1em;
+    padding: 1em 0;
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container-fluid {
+    background: url('../images/bg-pattern-top.svg') right 50vw top -600px no-repeat,
+      #19a2ae url('../images/bg-pattern-bottom.svg') left 50vw bottom -600px no-repeat;
+  }
+}
